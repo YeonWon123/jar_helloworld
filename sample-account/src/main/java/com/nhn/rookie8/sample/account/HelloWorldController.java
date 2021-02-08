@@ -1,4 +1,4 @@
-package com.nhn.rookie8.sample.ticket;
+package com.nhn.rookie8.sample.account;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -15,6 +15,7 @@ public class HelloWorldController {
     private String message = "Hello Rookie";
 
     @GetMapping("/")
+    @ResponseBody
     public String welcome(Model model) {
         model.addAttribute("time", new Date());
         model.addAttribute("message", this.message);
@@ -22,9 +23,9 @@ public class HelloWorldController {
     }
 
     @GetMapping("/helloworld")
-    @ResponseBody // 메시지 컨버터를 통해서 json, html 등으로(미디어 타입) 반환한다.
+    @ResponseBody
     public String helloworld() {
-        return "Hello Rookie!!"; // Plain Text로 반환됨
+        return "Hello world! Hello NamYunWon!!!!!!";
     }
 
 }
