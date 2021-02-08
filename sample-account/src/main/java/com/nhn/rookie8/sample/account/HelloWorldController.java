@@ -22,9 +22,9 @@ public class HelloWorldController {
         return "welcome";
     }
 
-    @GetMapping("/helloworld")
+    @GetMapping("/account/helloworld2")
     @ResponseBody
-    public String helloworld() {
+    public String helloworld2() {
         return "Hello world! Hello NamYunWon!!!!!!";
     }
 
